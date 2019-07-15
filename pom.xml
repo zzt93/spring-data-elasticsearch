@@ -4,7 +4,7 @@
 
     <groupId>org.springframework.data</groupId>
     <artifactId>spring-data-elasticsearch</artifactId>
-    <version>3.0.0.RELEASE</version>
+    <version>3.0.0.RELEASE-fix</version>
 
     <parent>
         <groupId>org.springframework.data.build</groupId>
@@ -222,8 +222,9 @@
 
     <repositories>
         <repository>
-            <id>spring-libs-release</id>
-            <url>https://repo.spring.io/libs-release</url>
+            <id>all</id>
+            <name>all</name>
+            <url>http://192.168.1.100:8081/artifactory/all</url>
         </repository>
     </repositories>
 
@@ -250,5 +251,18 @@
         <system>JIRA</system>
         <url>https://jira.spring.io/browse/DATAES</url>
     </issueManagement>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>simu-server-snapshots</name>
+            <url>http://192.168.1.100:8081/artifactory/all</url>
+        </snapshotRepository>
+        <repository>
+            <id>all</id>
+            <name>all</name>
+            <url>http://192.168.1.100:8081/artifactory/libs-release-local/</url>
+        </repository>
+    </distributionManagement>
 
 </project>
